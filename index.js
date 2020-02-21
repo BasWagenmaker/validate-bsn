@@ -15,6 +15,7 @@ exports.validate = function (bsn) {
     var bsnStringLength = bsnString.length;
     var i = 0, sum = 0, num = 9;
     for (i; i < bsnStringLength; i++) {
+        if (num === 1) { num = -1 }
         sum += parseInt(bsnString[i]) * num;
         num--;
     }
